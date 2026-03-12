@@ -24,7 +24,7 @@ def UI():
     pygame.draw.rect(screen, (211, 182, 131), (screenWidth-300, 0, screenWidth, screenHeight))
     pygame.draw.rect(screen, (255, 162, 131), (screenWidth-250, 25, 75, 100))
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
-skadoosh = (screen, 0, 0, 0, 100, 100, 20)
+
 cookies = []
 for i in range(random.randrange(10, 20)):
     cookies.append((random.randrange(10, 690), random.randrange(10, 690)))
