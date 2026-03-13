@@ -3,7 +3,6 @@ from tokenize import group
 import pygame
 import random
 import sys
-
 pygame.init()
 pygame.font.init()
 
@@ -11,8 +10,10 @@ screenWidth = 1000
 screenHeight = 700
 
 screen = pygame.display.set_mode((screenWidth, screenHeight))
-
 clock = pygame.time.Clock()
+
+font = pygame.font.SysFont('Arial', 30)
+
 
 def cookie(x, y):
     pygame.draw.circle(screen, (255, 218, 116), (x, y), 20)
@@ -22,7 +23,9 @@ def cookie(x, y):
         pygame.draw.circle(screen, (123, 63, 0), (x + chipsX, y + chipsY), 5)
 def UI():
     pygame.draw.rect(screen, (211, 182, 131), (screenWidth-300, 0, screenWidth, screenHeight))
-    pygame.draw.rect(screen, (255, 162, 131), (screenWidth-250, 25, 75, 100))
+    y=25
+    for i in range(5):
+        pygame.draw.rect(screen, (255, 162, 131), (screenWidth - 250, y + 20, 75, 100))
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
 cookies = []
@@ -44,8 +47,7 @@ while running:
     for c in cookies:
         cookie(c[0], c[1])
     UI()
-    pygame.display.flip()
-    # movement
+    # move
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         player_pos.y -= 300 * dt
