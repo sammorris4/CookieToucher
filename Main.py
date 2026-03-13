@@ -3,7 +3,7 @@ from tokenize import group
 import pygame
 import random
 import sys
-"ARTHURS CHANGES ARE COOL"
+#504 PM CHANGE
 # define screen dimensions
 screenWidth = 1000
 screenHeight = 700
