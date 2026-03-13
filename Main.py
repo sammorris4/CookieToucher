@@ -65,7 +65,7 @@ while running:
         for x, y in cookies:
             cookie(x, y)
     # declares what the player icon will look like (WIP)
-    player = pygame.draw.circle(screen, (0, 0, 0), player_pos, 30)
+    player = pygame.draw.circle(screen, (0, 0, 0), player_pos, 15)
 
     # movement
     keys = pygame.key.get_pressed()
